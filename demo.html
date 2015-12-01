@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dombuilder tests</title>
+	<script type="text/javascript" src="src/dombuilder.js"></script>
+</head>
+<body>
+	<div id="builder-target"/>
+	<script type="text/javascript">
+(function(b){
+	
+	var text = b.text,
+		a = b.a,
+		p = b.p,
+		href = b.href,
+		onclick = b.onclick;
+	
+	var e = b.build(
+		p(text("Test text:"),
+			a(text("Click me 1"), href("#"), onclick(function(){console.log('Builder Link Clicked');}))));		
+	window.document.getElementById('builder-target').appendChild(e);
+	
+})(DomBuilder);
+	</script>
+</body>
+</html>
