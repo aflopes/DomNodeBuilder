@@ -1,10 +1,12 @@
-DomNodeBuilder
-================
-Library to build DOM nodes dynamically
-
-
-Usage Example
--------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dombuilder tests</title>
+	<script type="text/javascript" src="../src/dombuilder.js"></script>
+</head>
+<body>
+	<div id="builder-target"/>
+	<script type="text/javascript">
 	(function(builder){
 
 		var text = builder.text,
@@ -22,3 +24,6 @@ Usage Example
 		window.document.getElementById('builder-target').appendChild(e);
 
 	})(DomNodeBuilder);
+	</script>
+</body>
+</html>

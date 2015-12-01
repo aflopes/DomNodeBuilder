@@ -1,4 +1,4 @@
-DomBuilder = function(){
+DomNodeBuilder = function(){
 	
 	//Attribute definition
 	function Attribute(name,value){
